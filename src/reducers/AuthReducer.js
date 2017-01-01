@@ -5,16 +5,20 @@ import {
 
 const INITIAL_STATE = {
   email: '',
-  password: '',
+  password: ''
 };
 
 export default (state = INITIAL_STATE, action) => {
+  console.log(state, action);
+
   switch (action.type) {
     case EMAIL_CHANGED:
+      console.log('state', state, action);
       return { ...state, email: action.payload };
     case PASSWORD_CHANGED:
       return { ...state, password: action.payload };
     default:
+      console.log('default');
       return state;
   }
 };
