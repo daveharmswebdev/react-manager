@@ -36,7 +36,6 @@ export default (state = INITIAL_STATE, action) => {
         loading: false
       };
     default:
-      console.log('default');
       return state;
   }
 };
